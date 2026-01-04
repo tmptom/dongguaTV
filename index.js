@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 const DATA_FILE = path.join(__dirname, 'db.json');
-const ADMIN_PASSWORD = "admin"; 
+const ADMIN_PASSWORD = "sATfDonJ4$*n*r"; 
 const FORCE_UPDATE = true; 
 
 app.use(cors());
