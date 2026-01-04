@@ -125,3 +125,4 @@ app.get('/api/admin/sites', (req, res) => res.json(getDB().sites));
 app.post('/api/admin/sites', (req, res) => { saveDB({sites: req.body.sites}); res.json({ success: true }); });
 
 app.listen(PORT, () => { console.log(`服务已启动: http://localhost:${PORT}`); });
+module.exports = app;
