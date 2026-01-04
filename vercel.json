@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source":"/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/s=:query",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin.html/:path*",
+      "destination": "/admin.html"
+    }
+  ]
+}
