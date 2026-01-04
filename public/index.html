@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="hot-row" data-section="cn">
-                    <div class="hot-card" v-for="item in list_cn" :key="item.id" @click="autoSearch(item.name)">
+                    <div class="hot-card" v-for="item in list_cn" :="item.id" @click="autoSearch(item.name)">
                         <div class="poster-wrap">
                             <img :src="'https://daili.smdhb.com/t/p/w300' + item.poster_path" loading="lazy">
                             <div class="rating-badge"><i class="fas fa-star text-warning"></i> {{
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 <div class="hot-row" data-section="krjp">
-                    <div class="hot-card" v-for="item in list_krjp" :key="item.id" @click="autoSearch(item.name)">
+                    <div class="hot-card" v-for="item in list_krjp" :="item.id" @click="autoSearch(item.name)">
                         <div class="poster-wrap">
                             <img :src="'https://daili.smdhb.com/t/p/w300' + item.poster_path" loading="lazy">
                             <div class="rating-badge"><i class="fas fa-star text-warning"></i> {{
@@ -189,9 +189,9 @@
             </div>
 
             <div class="result-grid" v-if="!loading">
-                <div class="result-card" v-for="group in groupedList" :key="group.name" @click="openDetail(group)">
+                <div class="result-card" v-for="group in groupedList" :="group.name" @click="openDetail(group)">
                     <div class="poster-wrap">
-                        <img v-if="!isFallback(group.name)" :src="finalPoster(group)" :key="finalPoster(group)"
+                        <img v-if="!isFallback(group.name)" :src="finalPoster(group)" :="finalPoster(group)"
                             referrerpolicy="no-referrer" @error="handleImgError(group.name)" loading="lazy">
                         <div v-else class="poster-fallback">
                             <i class="fas fa-film mb-2 opacity-50"></i>
@@ -277,7 +277,7 @@
         const { createApp, reactive } = Vue;
         // 使用你的反代域名
         const MY_PROXY = "https://daili.smdhb.com";
-        const TMDB_API_KEY = "替换成你自己的KEY"; 
+        const TMDB_API_KEY = "d6ae50b8ef606a73ba7beb68fbdae434"; 
 
         // API地址修改为你的反代
         const TMDB_BASE_URL = `${MY_PROXY}/3`;
