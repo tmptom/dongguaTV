@@ -1,7 +1,7 @@
 {
   "name": "node-video-proxy",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "dependencies": {
     "axios": "^1.6.0",
     "body-parser": "^1.20.2",
